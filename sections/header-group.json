@@ -6,7 +6,7 @@
       "type": "header",
       "settings": {
         "header_logo": "shopify:\/\/shop_images\/sonnet.webp",
-        "header_menu": ""
+        "header_menu": "main-menu"
       }
     }
   },
