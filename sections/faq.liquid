@@ -1,0 +1,43 @@
+<section class="section-faq">
+    <div class="faq-inmer">
+        <div class="faq-tabs">
+            {% for block in section.blocks %}
+                {% assign item = block.settings %}
+                <div class="faq-item">
+                    <div class="faq-btn">{{ item.question }}</div>
+                    <div class="faq-desc" style="display: none">{{ item.answer }}</div>
+                </div>
+            {% endfor  %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "FAQ Blocks",
+    "blocks": [
+        {
+            "name": "FAQ Items",
+            "type": "faq",
+            "settings": [
+                {
+                    "type": "text",
+                    "label": "Question",
+                    "id": "question"
+                },
+                {
+                    "type": "richtext",
+                    "label": "Answer",
+                    "id": "answer"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "FAQ Blocks"
+        }
+    ]
+}
+
+{% endschema %}
