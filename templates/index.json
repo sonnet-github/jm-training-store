@@ -100,11 +100,18 @@
       ],
       "settings": {
       }
+    },
+    "people_listing_dg3CJj": {
+      "type": "people-listing",
+      "settings": {
+        "people_main_title": ""
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "faq_7KxVKW"
+    "faq_7KxVKW",
+    "people_listing_dg3CJj"
   ]
 }
