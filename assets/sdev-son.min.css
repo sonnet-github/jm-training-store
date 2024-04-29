@@ -67,7 +67,7 @@
 }
 
 section.section-faq {
-  padding: 100px 20px;
+  padding: 100px 20px 50px;
 }
 section.section-faq .faq-inmer {
   max-width: 800px;
@@ -95,4 +95,44 @@ section.section-faq .faq-inmer .faq-desc p {
   font-size: 16px;
   margin: 0;
   padding: 20px;
+}
+
+.recipe-wrap {
+  padding: 50px 0;
+}
+.recipe-wrap .recipe-inner-wrap {
+  max-width: 1000px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.recipe-wrap .recipe-inner-wrap .recipe-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin: 0 -10px;
+}
+.recipe-wrap .recipe-inner-wrap .recipe-item {
+  width: 50%;
+  padding: 0 10px;
+}
+.recipe-wrap .recipe-inner-wrap .recipe-item .recipe-img {
+  position: relative;
+}
+.recipe-wrap .recipe-inner-wrap .recipe-item .recipe-img canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.recipe-wrap .recipe-inner-wrap .recipe-item .recipe-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

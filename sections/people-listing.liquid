@@ -1,0 +1,52 @@
+<div class="recipe-wrap">
+    <div class="recipe-inner-wrap">
+      <div class="recipe-title">
+          <h2>Leaderships</h2>
+      </div>
+      {% assign people = shop.metaobjects.people.values %}
+      {% if people != blank %}
+      <div class="recipe-list">
+          {% for peoples in people %}
+          <div class="recipe-item">
+              <div class="recipe-inner">
+                  <div class="recipe-img">
+                      <canvas width="500" height="420"></canvas>
+                      <img src="{{ peoples.featured_image | image_url:  width: 500, height: 420 }}" width="auto" height="auto">
+                  </div>
+                  <div class="recipe-desc">
+                      <div class="recipe-title">
+                          {{ peoples.name }}
+                      </div>
+                      <div class="poeple-jd">{{ peoples.job_description }}</div>
+                      <div class="recipe-para">
+                          {{ peoples.contents | metafield_tag}}
+                      </div>
+                      <div class="recipe-read">
+                          <a href="{{ peoples.system.url }}">Read more</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+      {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "People Listing",
+    "settings": [
+      {
+        "type": "text",
+        "id": "people_main_title",
+        "label": "Title"
+      }
+    ],
+    "presets": [
+      {
+        "name": "People Listing"
+      }
+    ]
+  }
+{% endschema %}
